@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>SSR科学上网脚本</title>
+      <link href="2022/07/12/ssr-ke-xue-shang-wang-jiao-ben/"/>
+      <url>2022/07/12/ssr-ke-xue-shang-wang-jiao-ben/</url>
+      
+        <content type="html"><![CDATA[<h1 id="SSR科学上网脚本"><a href="#SSR科学上网脚本" class="headerlink" title="SSR科学上网脚本"></a>SSR科学上网脚本</h1><p>登录到购买好的Linux服务器（windows可参考 Bitvise连接Linux服务器教程，mac用户请参考 Mac电脑连接Linux教程），在终端（黑框框）里输入如下命令：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">bash &lt;(curl -sL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;hijkpw&#x2F;scripts&#x2F;master&#x2F;centos_install_ssr.sh)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>按回车键，屏幕出现“请设置SSR的密码（不输入则随机生成）” 的提示，按照提示设置密码（SSR的密码。例如1234abcd，不是买服务器后台的密码）、端口（SSR的端口，例如12345，不能是22和80）并选择加密方式。</p><p>接下来屏幕上开始疯狂出现一堆你看得懂也可能看不懂的东西，如果安装过程中卡住，请耐心等待几分钟；期间网络断开（windows上表现为黑框框中或者顶部标题出现disconnected字样，mac表现为终端出现“closed by remote host”或”broken pipe”），请重新连接后再次执行命令。脚本执行成功后会输出SSR配置</p><p>到此服务端配置完毕，服务器可能会自动重启(没提示重启则不需要)，windows终端出现“disconnected”，mac出现“closed by remote host”说明服务器重启了。</p><p>SSR一键脚本做了如下事情：</p><p>更新系统到最新版<br>安装bbr加速模块<br>安装SSR并设置开机启动<br>客户端下载<br>接下来是科学上网最后一步：下载客户端，并参考页面中的配置教程进行配置，下载客户端配置好后，就可以愉快的上外网了！</p><p>其他</p><ol><li>查看ssr运行状态/配置：</li></ol><pre class="line-numbers language-none"><code class="language-none">bash &lt;(curl -sL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;hijkpw&#x2F;scripts&#x2F;master&#x2F;centos_install_ssr.sh) info<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol start="2"><li>SSR管理命令：</li></ol><p>启动：<code>systemctl start shadowsocksR</code>；</p><p>停止：<code>systemctl stop shadowsocksR</code>；</p><p>重启：<code>systemctl restart shadowsocksR</code>；</p><ol start="3"><li><p>更改密码、端口、混淆参数的最简单方法：重新运行一次安装脚本;</p></li><li><p>卸载SSR：</p></li></ol><pre class="line-numbers language-none"><code class="language-none">bash &lt;(curl -sL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;hijkpw&#x2F;scripts&#x2F;master&#x2F;centos_install_ssr.sh) uninstall。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Others </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Others </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo matery主题推荐</title>
       <link href="2021/04/30/hexo-matery-zhu-ti-tui-jian/"/>
       <url>2021/04/30/hexo-matery-zhu-ti-tui-jian/</url>
